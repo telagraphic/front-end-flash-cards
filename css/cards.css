@@ -1,0 +1,191 @@
+.home {
+  display: grid;
+  grid-template-areas: "header" "content-1" "contact" "content-2";
+}
+
+.home__header {
+  display: grid;
+  justify-content: center;
+}
+
+.header {
+  font-family: "Sans Forgetica";
+  font-weight: 400;
+  font-style: normal;
+  font-size: calc(28px + (66 - 28) * ((100vw - 320px) / (2000 - 320)));
+}
+
+.home__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  grid-row-gap: 4%;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 81.56rem) {
+  .home__content {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 1rem;
+    grid-row-gap: 2rem;
+    grid-row-gap: 2%;
+    justify-self: center;
+    width: 66%;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.card {
+  display: grid;
+  grid-template-areas: "card";
+  justify-self: center;
+  width: 89%;
+  --card-background-color: #F0F0F0;
+}
+
+@media (min-width: 61.56rem) {
+  .card {
+    width: 60%;
+  }
+}
+
+@media (min-width: 81.56rem) {
+  .card {
+    width: 100%;
+  }
+}
+
+.card__deck {
+  grid-area: card;
+  max-width: 100%;
+  height: 0;
+  padding-top: calc(300 / 500 * 100%);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0.125em 0.313em rgba(50, 50, 93, 0.09), 0 0.063em 0.125em rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0.25em 0.375em rgba(50, 50, 93, 0.09), 0 0.063em 0.188em rgba(0, 0, 0, 0.08);
+  z-index: 5;
+}
+
+@media (min-width: 81.56rem) {
+  .card__deck {
+    max-width: 100%;
+    height: 0;
+    padding-top: calc(300 / 500 * 100%);
+  }
+}
+
+.card__deck-contents {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas: "title" "summary";
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--card-background-color);
+}
+
+.card__title {
+  grid-area: title;
+  font-family: "Sans Forgetica";
+  font-weight: 400;
+  font-style: normal;
+  font-size: calc(21px + (34 - 21) * ((100vw - 320px) / (2000 - 320)));
+  text-align: center;
+}
+
+@media (min-width: 43rem) {
+  .card__title {
+    font-size: calc(24px + (55 - 24) * ((100vw - 320px) / (2000 - 320)));
+    font-size: calc(35px + (55 - 35) * ((100vw - 320px) / (2000 - 320)));
+  }
+}
+
+@media (min-width: 81.56rem) {
+  .card__title {
+    font-size: calc(24px + (55 - 24) * ((100vw - 320px) / (2000 - 320)));
+  }
+}
+
+.card__summary {
+  grid-area: summary;
+  justify-self: center;
+  margin-left: -21%;
+  font-family: "Optician Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-size: calc(12px + (18 - 12) * ((100vw - 320px) / (2000 - 320)));
+}
+
+@media (min-width: 43rem) {
+  .card__summary {
+    justify-self: center;
+    margin-left: -8%;
+    font-size: calc(16px + (21 - 16) * ((100vw - 320px) / (2000 - 320)));
+  }
+}
+
+.card__bg-stack-1 {
+  grid-area: card;
+  max-width: 100%;
+  height: 0;
+  padding-top: calc(300 / 500 * 100%);
+  background-color: var(--card-background-color);
+  box-shadow: 0 0.125em 0.313em rgba(50, 50, 93, 0.09), 0 0.063em 0.125em rgba(0, 0, 0, 0.07);
+  transform: rotate(0.5deg);
+  z-index: 4;
+}
+
+@media (min-width: 81.56rem) {
+  .card__bg-stack-1 {
+    max-width: 100%;
+    height: 0;
+    padding-top: calc(300 / 500 * 100%);
+  }
+}
+
+.card__bg-stack-2 {
+  grid-area: card;
+  max-width: 100%;
+  height: 0;
+  padding-top: calc(300 / 500 * 100%);
+  background-color: var(--card-background-color);
+  box-shadow: 0 0.125em 0.313em rgba(50, 50, 93, 0.09), 0 0.063em 0.125em rgba(0, 0, 0, 0.07);
+  transform: rotate(0.5deg);
+  z-index: 3;
+}
+
+@media (min-width: 81.56rem) {
+  .card__bg-stack-2 {
+    max-width: 100%;
+    height: 0;
+    padding-top: calc(300 / 500 * 100%);
+  }
+}
+
+.card__bg-stack-3 {
+  grid-area: card;
+  max-width: 100%;
+  height: 0;
+  padding-top: calc(300 / 500 * 100%);
+  background-color: var(--card-background-color);
+  box-shadow: 0 0.125em 0.313em rgba(50, 50, 93, 0.09), 0 0.063em 0.125em rgba(0, 0, 0, 0.07);
+  transform: rotate(0.5deg);
+  z-index: 2;
+}
+
+@media (min-width: 81.56rem) {
+  .card__bg-stack-3 {
+    max-width: 100%;
+    height: 0;
+    padding-top: calc(300 / 500 * 100%);
+  }
+}
