@@ -1,3 +1,6 @@
+body
+  background-color: #f0f0f0
+
 .home
   display: grid
 
@@ -22,10 +25,14 @@
   grid-template-columns: 1fr
 
   justify-content: center
-  grid-row-gap: 4%
+  grid-row-gap: 2%
   grid-column-gap: 2%
 
   padding: 0 1.5rem
+
+  @media (min-width: 41.56rem)
+    grid-row-gap: 4%
+    grid-column-gap: 2%
 
   @media (min-width: 51.56rem)
     grid-template-columns: 1fr 1fr
@@ -48,13 +55,19 @@
   grid-template-areas: "card"
 
   justify-self: center
-
   width: 100%
 
   @media (min-width: 41.56rem)
+    width: 71%
+
+  @media (min-width: 41.56rem)
+    width: 71%
+
+  @media (min-width: 51.56rem)
     width: 100%
 
   --card-background-color: #F0F0F0
+  --card-background-color: #FAFAFA
 
 
   &__deck
@@ -103,8 +116,6 @@
 
     background-color: var(--card-background-color)
 
-
-
     // &:before
     //   display: grid
     //   justify-content: center
@@ -131,8 +142,12 @@
     font-weight: 400
     font-style: normal
     font-size: calc(30px + (45 - 30) * ((100vw - 320px) / (2000 - 320)))
+    font-size: calc(25px + (35 - 25) * ((100vw - 320px) / (2000 - 320)))
 
-    @media (min-width: 43rem)
+    @media (min-width: 29rem)
+      font-size: calc(35px + (55 - 35) * ((100vw - 320px) / (2000 - 320)))
+
+    @media (min-width: 41.56rem)
       font-size: calc(35px + (55 - 35) * ((100vw - 320px) / (2000 - 320)))
 
     @media (min-width: 61rem)
@@ -154,12 +169,16 @@
     font-style: normal
     font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (2000 - 320)))
 
+
+    @media (min-width: 29rem)
+      font-size: calc(15px + (18 - 15) * ((100vw - 320px) / (2000 - 320)))
+
     @media (min-width: 43rem)
       justify-self: center
 
       margin-left: -8%
 
-      font-size: calc(16px + (21 - 16) * ((100vw - 320px) / (2000 - 320)))
+      font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (2000 - 320)))
 
     @media (min-width: 81.56rem)
       font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (2000 - 320)))
