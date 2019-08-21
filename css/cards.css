@@ -13,16 +13,30 @@ body {
 }
 
 .header {
+  justify-self: center;
   font-family: "Sans Forgetica";
   font-weight: 400;
   font-style: normal;
   font-size: calc(28px + (72 - 28) * ((100vw - 320px) / (2000 - 320)));
+  margin: 0;
+  padding: 1.5rem 0;
 }
 
 @media (min-width: 81.56rem) {
   .header {
     font-size: calc(35px + (72 - 35) * ((100vw - 320px) / (2000 - 320)));
   }
+}
+
+.header__github-star {
+  justify-self: center;
+}
+
+.header__description {
+  font-family: "Optician Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (2000 - 320)));
 }
 
 .home__content {
