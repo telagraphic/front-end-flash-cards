@@ -35,7 +35,7 @@ body
     font-family: "Optician Sans"
     font-weight: 400
     font-style: normal
-    font-size: calc(19px + (24 - 19) * ((100vw - 320px) / (2000 - 320)))
+    font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (2000 - 320)))
 
     @media (min-width: 41.56rem)
       font-size: calc(26px + (30 - 26) * ((100vw - 320px) / (2000 - 320)))
@@ -222,21 +222,26 @@ body
 
   &__footer
     grid-area: footer
-
-    justify-self: center
+    display: flex
+    justify-content: center
 
     font-family: "Optician Sans"
     font-weight: 400
     font-style: normal
-    font-size: calc(12px + (18 - 12) * ((100vw - 320px) / (2000 - 320)))
+    font-size: calc(12px + (22 - 12) * ((100vw - 320px) / (2000 - 320)))
 
   &__learn-more
+    padding: 0 2%
+    color: black
     text-decoration: none
+
 
     &:hover
       text-decoration: underline
 
   &__download
+    padding: 0 2%
+    color: black
     text-decoration: none
 
     &:hover
