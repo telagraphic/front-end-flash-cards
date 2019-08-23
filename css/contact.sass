@@ -1,0 +1,63 @@
+.home__contact
+  grid-area: contact
+  display: grid
+  grid-template-columns: 1fr
+
+  justify-content: center
+  justify-self: center
+
+  width: 89%
+  padding: 2% 0
+  margin: 2% 0
+
+  font-family: "Optician Sans"
+  font-weight: 400
+  font-style: normal
+  font-size: calc(16px + (30 - 16) * ((100vw - 320px) / (2000 - 320)))
+
+  text-align: center
+
+  margin: 23% 0 2.5% 0
+
+  border-top: 1px solid black
+  border-bottom: 1px solid black
+
+  @media (min-width: 41.56rem)
+    width: 66%
+    font-size: calc(26px + (30 - 26) * ((100vw - 320px) / (2000 - 320)))
+    margin: 2% 0
+
+.contact
+
+  &__container
+
+  &__email-cta
+
+  &__email-input
+
+    input
+      background-color: white
+      outline: none
+      border: none
+
+      text-align: center
+
+      &::selection,
+      &::-moz-selection
+       background: white
+
+  &__twitter
+
+    // <article class="home__contact">
+    //   <section class="contact__container">
+    //     <p class="contact__email-cta">
+    //       Get updates for new decks
+    //     </p>
+    //     <form class="contact__email-input" action="">
+    //       <input type="email" placeholder="email@email.com"></input>
+    //     </form>
+    //     <p class="contact__twitter">
+    //       Follow on Twitter <a href="https://twitter.com/telagraphic">@telagraphic</a>
+    //     </p>
+    //   </section>
+    // </article>

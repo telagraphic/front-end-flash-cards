@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/footer.css">
 
   <link rel="preload" href="fonts/SansForgetica-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/Optician-Sans.woff2" as="font" type="font/woff2" crossorigin>
@@ -191,7 +193,37 @@
         </section>
       </section>
     </article>
+
+    <article class="home__contact">
+      <section class="contact">
+        <p class="contact__email-cta">
+          Get updates for new decks
+        </p>
+        <form class="contact__email-input" action="">
+          <input type="email" placeholder="email@email.com"></input>
+        </form>
+        <p class="contact__twitter">
+          Follow on Twitter <a href="https://twitter.com/telagraphic">@telagraphic</a>
+        </p>
+      </section>
+    </article>
+
+    <footer>
+      <a href="#">About</a>
+      |
+      <a href="#">How to Use</a>
+    </footer>
   </main>
 </body>
+<script>
+  const email = document.querySelector('input');
+  email.style.transition = 'all .5s ease';
+  email.addEventListener('focus', function() {
+    email.placeholder = '';
+  });
+  email.addEventListener('blur', function() {
+    email.placeholder = 'email@email.com';
+  });
+</script>
 
 </html>

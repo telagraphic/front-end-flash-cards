@@ -4,7 +4,7 @@ body {
 
 .home {
   display: grid;
-  grid-template-areas: "header" "content-1" "contact" "content-2";
+  grid-template-areas: "header" "content-1" "contact" "footer";
 }
 
 .home__header {
@@ -38,8 +38,14 @@ body {
   font-family: "Optician Sans";
   font-weight: 400;
   font-style: normal;
-  font-size: calc(16px + (30 - 26) * ((100vw - 320px) / (2000 - 320)));
+  font-size: calc(19px + (24 - 19) * ((100vw - 320px) / (2000 - 320)));
   text-align: center;
+}
+
+@media (min-width: 41.56rem) {
+  .header__description {
+    font-size: calc(26px + (30 - 26) * ((100vw - 320px) / (2000 - 320)));
+  }
 }
 
 .home__content {
@@ -49,13 +55,14 @@ body {
   grid-row-gap: 4%;
   grid-column-gap: 2%;
   padding: 0 1.5rem;
-  margin: 2rem 0;
+  margin: 1rem 0 2rem 0;
 }
 
 @media (min-width: 41.56rem) {
   .home__content {
     grid-row-gap: 4%;
     grid-column-gap: 2%;
+    margin: 2rem 0;
   }
 }
 
