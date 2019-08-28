@@ -1,0 +1,3 @@
+mkdir {pages,styles,files,mockups}
+touch notes.txt index.html
+

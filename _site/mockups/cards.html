@@ -4,33 +4,31 @@
 <head>
   <meta charset="utf-8">
   <title>Front End Flash Cards</title>
-  <meta name="description" content="Flash cards for learning front end topics">
+  <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/cards.css">
-  <link rel="stylesheet" href="css/card.css">
-  <link rel="stylesheet" href="css/contact.css">
-  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/cards.css">
 
-  <link rel="preload" href="fonts/SansForgetica-Regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/Optician-Sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/SansForgetica-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/Optician-Sans.woff2" as="font" type="font/woff2" crossorigin>
 
+  <!-- Place this tag in your head or just before your close body tag. -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
 
   <style>
     @font-face {
       font-family: "Sans Forgetica";
-      src: "url(fonts/SansForgetica-Regular.woff2) format('woff2'), url(fonts/SansForgetica-Regular.woff) format('woff')";
+      src: "url(../fonts/SansForgetica-Regular.woff2) format('woff2'), url(../fonts/SansForgetica-Regular.woff) format('woff')";
       font-display: swap;
       font-weight: 400;
     }
 
     @font-face {
       font-family: "Optician Sans";
-      src: "url(fonts/Optician-Sans.woff2) format('woff2'), url(fonts/Optician-Sans.woff) format('woff')";
+      src: "url(../fonts/Optician-Sans.woff2) format('woff2'), url(../fonts/Optician-Sans.woff) format('woff')";
       font-display: swap;
       font-weight: 400;
     }
@@ -78,7 +76,7 @@
               </li>
             </ul>
             <section class="card__footer">
-              <a class="card__learn-more" href="web-performance.html">Learn More</a> |
+              <a class="card__learn-more" href="#">Learn More</a> |
               <a class="card__download" href="#">Download</a>
             </section>
 
@@ -110,7 +108,7 @@
               </li>
             </ul>
             <section class="card__footer">
-              <a class="card__learn-more" href="typography.html">Learn More</a> |
+              <a class="card__learn-more" href="#">Learn More</a> |
               <a class="card__download" href="#">Download</a>
             </section>
           </section>
@@ -194,38 +192,8 @@
         </section>
       </section>
     </article>
-
-    <article class="home__contact">
-      <section class="contact">
-        <p class="contact__email-cta">
-          Get updates for new decks
-        </p>
-        <form class="contact__email-input" action="">
-          <input type="email" placeholder="email@email.com"></input>
-          <button type="submit">GO!</button>
-        </form>
-        <p class="contact__twitter">
-          Follow on Twitter <a href="https://twitter.com/telagraphic">@telagraphic</a>
-        </p>
-      </section>
-    </article>
-
-    <footer>
-      <a href="#">About</a>
-      &mdash;
-      <a href="#">How to Use</a>
-    </footer>
   </main>
+
 </body>
-<script>
-  const email = document.querySelector('input');
-  email.style.transition = 'all .5s ease';
-  email.addEventListener('focus', function() {
-    email.placeholder = '';
-  });
-  email.addEventListener('blur', function() {
-    email.placeholder = 'email@email.com';
-  });
-</script>
 
 </html>
