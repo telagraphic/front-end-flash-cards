@@ -1,19 +1,18 @@
-body {
+.home {
+  display: grid;
+  grid-template-areas: "header" "body" "footer";
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 100%;
   background-color: #f0f0f0;
 }
 
-.home {
-  display: grid;
-  grid-template-areas: "header" "content-1" "contact" "footer";
-}
-
 .home__header {
+  grid-area: header;
   display: grid;
-  justify-content: center;
+  justify-items: center;
 }
 
-.header {
-  justify-self: center;
+.home-header__title {
   font-family: "Sans Forgetica";
   font-weight: 400;
   font-style: normal;
@@ -23,16 +22,16 @@ body {
 }
 
 @media (min-width: 81.56rem) {
-  .header {
+  .home-header__title {
     font-size: calc(35px + (72 - 35) * ((100vw - 320px) / (2000 - 320)));
   }
 }
 
-.header__github-star {
+.home-header__github-star {
   justify-self: center;
 }
 
-.header__description {
+.home-header__description {
   width: 89%;
   justify-self: center;
   font-family: "Optician Sans";
@@ -43,43 +42,85 @@ body {
 }
 
 @media (min-width: 41.56rem) {
-  .header__description {
+  .home-header__description {
     font-size: calc(26px + (30 - 26) * ((100vw - 320px) / (2000 - 320)));
   }
 }
 
 .home__content {
+  grid-area: body;
+  display: grid;
+  grid-template-rows: max-content max-content;
+  grid-template-columns: 100vw;
+  grid-template-areas: "cards" "contact";
+  justify-content: center;
+}
+
+@media (min-width: 51.56rem) {
+  .home__content {
+    grid-template-columns: 55%;
+  }
+}
+
+.cards-content {
+  grid-area: cards;
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
-  grid-row-gap: 4%;
   grid-column-gap: 2%;
   padding: 0 1.5rem;
   margin: 1rem 0 2rem 0;
 }
 
 @media (min-width: 41.56rem) {
-  .home__content {
-    grid-row-gap: 4%;
+  .cards-content {
     grid-column-gap: 2%;
     margin: 2rem 0;
   }
 }
 
 @media (min-width: 51.56rem) {
-  .home__content {
+  .cards-content {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (min-width: 81.56rem) {
-  .home__content {
+  .cards-content {
     grid-template-columns: 1fr 1fr;
     justify-self: center;
-    width: 66%;
-    padding: 0;
+    width: 100%;
+    padding: 2% 0;
     justify-content: center;
     align-items: center;
+  }
+}
+
+.card {
+  display: grid;
+  grid-template-areas: "card";
+  padding: 4% 0;
+  justify-self: center;
+  width: 100%;
+  --card-background-color: #F0F0F0;
+  --card-background-color: #FAFAFA;
+}
+
+@media (min-width: 41.56rem) {
+  .card {
+    width: 71%;
+  }
+}
+
+@media (min-width: 41.56rem) {
+  .card {
+    width: 71%;
+  }
+}
+
+@media (min-width: 51.56rem) {
+  .card {
+    width: 100%;
   }
 }
 
@@ -141,33 +182,6 @@ body {
 .card:nth-of-type(4) .card__bg-stack-3 {
   box-shadow: 0 0.125em 0.313em rgba(50, 50, 93, 0.09), 0 0.063em 0.125em rgba(0, 0, 0, 0.07);
   transform: rotate(0.5deg) translate(-7px, -7px);
-}
-
-.card {
-  display: grid;
-  grid-template-areas: "card";
-  justify-self: center;
-  width: 100%;
-  --card-background-color: #F0F0F0;
-  --card-background-color: #FAFAFA;
-}
-
-@media (min-width: 41.56rem) {
-  .card {
-    width: 71%;
-  }
-}
-
-@media (min-width: 41.56rem) {
-  .card {
-    width: 71%;
-  }
-}
-
-@media (min-width: 51.56rem) {
-  .card {
-    width: 100%;
-  }
 }
 
 .card__deck {
@@ -334,4 +348,119 @@ body {
   background-color: var(--card-background-color);
   z-index: 2;
   position: relative;
+}
+
+.contact-content {
+  grid-area: contact;
+  display: grid;
+  justify-self: center;
+  justify-content: center;
+  width: 89%;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+@media (min-width: 81.56rem) {
+  .contact-content {
+    padding: 0;
+  }
+}
+
+.contact-form {
+  display: grid;
+  width: 100%;
+  margin: 5% 0;
+  font-family: "Optician Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-size: calc(16px + (30 - 16) * ((100vw - 320px) / (2000 - 320)));
+  text-align: center;
+}
+
+@media (min-width: 41.56rem) {
+  .contact-form {
+    font-size: calc(22px + (28 - 22) * ((100vw - 320px) / (2000 - 320)));
+  }
+}
+
+@media (min-width: 51.56rem) {
+  .contact-form {
+    margin: 0%;
+  }
+}
+
+@media (min-width: 81rem) {
+  .contact-form {
+    width: 100%;
+  }
+}
+
+.contact-form__email-input {
+  display: grid;
+  grid-template-areas: "input button";
+  grid-template-columns: 1fr .2fr;
+  grid-template-rows: auto;
+  height: 2rem;
+  box-shadow: 0 0.125em 0.313em rgba(50, 50, 93, 0.09), 0 0.063em 0.125em rgba(0, 0, 0, 0.07);
+}
+
+.contact-form__email-input input {
+  grid-area: input;
+  background-color: white;
+  outline: none;
+  border: none;
+  text-align: center;
+}
+
+.contact-form__email-input input::selection, .contact-form__email-input input::-moz-selection {
+  background: white;
+}
+
+.contact-form__email-input button {
+  grid-area: button;
+  background-color: white;
+  border: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+}
+
+@media (min-width: 41.56rem) {
+  .contact-form__email-input button {
+    color: #626161;
+  }
+}
+
+.contact-form__twitter a {
+  color: black;
+  text-decoration: none;
+}
+
+.contact-form__twitter a:hover {
+  padding: 0 0 .125rem 0;
+  border-bottom: .125rem solid black;
+}
+
+.home__footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: column nowrap;
+  justify-self: center;
+  justify-content: center;
+  width: 100%;
+  padding: 2% 0 3% 0;
+  font-family: "Optician Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-size: calc(18px + (36 - 18) * ((100vw - 320px) / (2000 - 320)));
+  text-align: center;
+}
+
+.home__footer a {
+  padding: 0 1%;
+  color: black;
+  text-decoration: none;
+}
+
+.home__footer a:hover {
+  text-decoration: underline;
 }

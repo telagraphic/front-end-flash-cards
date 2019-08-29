@@ -38,25 +38,25 @@
 
 </head>
 
-<body>
+<body class="home">
   <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
-  <main class="home">
-    <header class="home__header">
-      <h1 class="header">
-        Front End Flash Cards
-      </h1>
-      <section class="header__github-star">
-        <a class="github-button" href="https://github.com/telagraphic/front-end-flash-cards" data-size="large" data-show-count="true" aria-label="Star telagraphic/front-end-flash-cards on GitHub">Star</a>
-      </section>
-      <p class="header__description">
-        Downloadable decks come with color & b+w files for print
-      </p>
-    </header>
+  <header class="home__header">
+    <h1 class="home-header__title">
+      Front End Flash Cards
+    </h1>
+    <section class="home-header__github-star">
+      <a class="github-button" href="https://github.com/telagraphic/front-end-flash-cards" data-size="large" data-show-count="true" aria-label="Star telagraphic/front-end-flash-cards on GitHub">Star</a>
+    </section>
+    <p class="home-header__description">
+      Downloadable decks come with color & b+w files for print
+    </p>
+  </header>
 
-    <article class="home__content">
+  <main class="home__content">
+    <article class="cards-content">
       <section class="card">
         <section class="card__deck">
           <section class="card__deck-contents">
@@ -194,28 +194,28 @@
         </section>
       </section>
     </article>
-
-    <article class="home__contact">
-      <section class="contact">
-        <p class="contact__email-cta">
+    <article class="contact-content">
+      <section class="contact-form">
+        <p class="contact-form__email-cta">
           Get updates for new decks
         </p>
-        <form class="contact__email-input" action="">
+        <form class="contact-form__email-input" action="">
           <input type="email" placeholder="email@email.com"></input>
           <button type="submit">GO!</button>
         </form>
-        <p class="contact__twitter">
+        <p class="contact-form__twitter">
           Follow on Twitter <a href="https://twitter.com/telagraphic">@telagraphic</a>
         </p>
       </section>
     </article>
-
-    <footer>
-      <a href="#">About</a>
-      &mdash;
-      <a href="#">How to Use</a>
-    </footer>
   </main>
+
+  <footer class="home__footer">
+    <a href="#">About</a>
+    &mdash;
+    <a href="#">How to Use</a>
+  </footer>
+
 </body>
 <script>
   const email = document.querySelector('input');
