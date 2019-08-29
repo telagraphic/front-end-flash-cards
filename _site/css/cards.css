@@ -56,9 +56,15 @@
   justify-content: center;
 }
 
-@media (min-width: 51.56rem) {
+@media (min-width: 81rem) {
   .home__content {
-    grid-template-columns: 55%;
+    grid-template-columns: 80%;
+  }
+}
+
+@media (min-width: 100rem) {
+  .home__content {
+    grid-template-columns: 60%;
   }
 }
 
@@ -75,7 +81,6 @@
 @media (min-width: 41.56rem) {
   .cards-content {
     grid-column-gap: 2%;
-    margin: 2rem 0;
   }
 }
 
@@ -90,7 +95,6 @@
     grid-template-columns: 1fr 1fr;
     justify-self: center;
     width: 100%;
-    padding: 2% 0;
     justify-content: center;
     align-items: center;
   }
@@ -106,19 +110,20 @@
   --card-background-color: #FAFAFA;
 }
 
-@media (min-width: 41.56rem) {
+@media (min-width: 26rem) {
+  .card {
+    width: 90%;
+    padding: 2.5% 0;
+  }
+}
+
+@media (min-width: 41rem) {
   .card {
     width: 71%;
   }
 }
 
-@media (min-width: 41.56rem) {
-  .card {
-    width: 71%;
-  }
-}
-
-@media (min-width: 51.56rem) {
+@media (min-width: 51rem) {
   .card {
     width: 100%;
   }
@@ -136,7 +141,7 @@
 
 .card:nth-of-type(1) .card__bg-stack-3 {
   box-shadow: 0 0.125em 0.313em rgba(50, 50, 93, 0.09), 0 0.063em 0.125em rgba(0, 0, 0, 0.07);
-  transform: rotate(0.5deg);
+  transform: rotate(1.15deg) translate(-0.45rem, 0.45rem);
 }
 
 .card:nth-of-type(2) .card__bg-stack-1 {
@@ -156,7 +161,7 @@
 
 .card:nth-of-type(3) .card__bg-stack-1 {
   box-shadow: 0 0.125em 0.313em rgba(50, 50, 93, 0.09), 0 0.063em 0.125em rgba(0, 0, 0, 0.07);
-  transform: rotate(-0.75deg) translate(0.35rem, 1px);
+  transform: rotate(1.25deg) translate(0.15rem, -3px);
 }
 
 .card:nth-of-type(3) .card__bg-stack-2 {
@@ -166,7 +171,7 @@
 
 .card:nth-of-type(3) .card__bg-stack-3 {
   box-shadow: 0 0.125em 0.313em rgba(50, 50, 93, 0.09), 0 0.063em 0.125em rgba(0, 0, 0, 0.07);
-  transform: rotate(-1deg) translate(-0.1875rem, 0.5rem);
+  transform: rotate(-1deg) translate(-0.187rem, -0.5rem);
 }
 
 .card:nth-of-type(4) .card__bg-stack-1 {
@@ -214,6 +219,7 @@
 .card__deck-contents {
   display: grid;
   grid-template-columns: auto;
+  grid-template-columns: 100%;
   grid-template-rows: 1.5fr 2fr .5fr;
   grid-template-areas: "title" "summary" "footer";
   justify-content: center;
@@ -300,6 +306,7 @@
   font-weight: 400;
   font-style: normal;
   font-size: calc(12px + (22 - 12) * ((100vw - 320px) / (2000 - 320)));
+  font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (2000 - 320)));
 }
 
 .card__learn-more {

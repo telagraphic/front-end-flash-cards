@@ -53,9 +53,11 @@
 
   justify-content: center
 
-  @media (min-width: 51.56rem)
-    grid-template-columns: 55%
+  @media (min-width: 81rem)
+    grid-template-columns: 80%
 
+  @media (min-width: 100rem)
+    grid-template-columns: 60%
 
 .cards-content
   grid-area: cards
@@ -71,8 +73,6 @@
   @media (min-width: 41.56rem)
     grid-column-gap: 2%
 
-    margin: 2rem 0
-
   @media (min-width: 51.56rem)
     grid-template-columns: 1fr 1fr
 
@@ -82,8 +82,6 @@
     justify-self: center
 
     width: 100%
-
-    padding: 2% 0
 
     justify-content: center
     align-items: center
@@ -100,13 +98,15 @@
   --card-background-color: #F0F0F0
   --card-background-color: #FAFAFA
 
-  @media (min-width: 41.56rem)
+  @media (min-width: 26rem)
+    width: 90%
+
+    padding: 2.5% 0
+
+  @media (min-width: 41rem)
     width: 71%
 
-  @media (min-width: 41.56rem)
-    width: 71%
-
-  @media (min-width: 51.56rem)
+  @media (min-width: 51rem)
     width: 100%
 
   &:nth-of-type(1)
@@ -151,6 +151,7 @@
   &__deck-contents
     display: grid
     grid-template-columns: auto
+    grid-template-columns: 100%
     grid-template-rows: 1.5fr 2fr .5fr
     grid-template-areas: "title" "summary" "footer"
 
@@ -225,6 +226,7 @@
     font-weight: 400
     font-style: normal
     font-size: calc(12px + (22 - 12) * ((100vw - 320px) / (2000 - 320)))
+    font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (2000 - 320)))
 
   &__learn-more
     padding: 0 2%
@@ -350,7 +352,6 @@
       @media (min-width: 41.56rem)
         color: #626161
 
-
   &__twitter
 
     a
@@ -360,7 +361,6 @@
       &:hover
         padding: 0 0 .125rem 0
         border-bottom: .125rem solid black
-
 
 .home__footer
   grid-area: footer
