@@ -1,57 +1,127 @@
 @import 'card-stacks.sass'
 
-.deck__content
+.deck-page
   display: grid
-  grid-template-columns: 1fr
+  grid-template-areas: "header" "body" "footer"
+  grid-template-rows: auto auto auto
+  grid-template-columns: 100%
+
+  background-color: #f0f0f0
+
+.deck-page__header
+  grid-area: header
+  display: grid
+  justify-items: center
+
+.deck-header
+
+  &__title
+    font-family: "Sans Forgetica"
+    font-weight: 400
+    font-style: normal
+    font-size: calc(28px + (72 - 28) * ((100vw - 320px) / (2000 - 320)))
+
+    margin: 0
+    padding: 1.5rem 0
+
+    @media (min-width: 81.56rem)
+      font-size: calc(35px + (72 - 35) * ((100vw - 320px) / (2000 - 320)))
+
+  &__github-star
+    justify-self: center
+
+  &__description
+    width: 89%
+    justify-self: center
+
+    font-family: "Optician Sans"
+    font-weight: 400
+    font-style: normal
+    font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (2000 - 320)))
+    text-align: center
+
+    @media (min-width: 41.56rem)
+      font-size: calc(26px + (30 - 26) * ((100vw - 320px) / (2000 - 320)))
+
+.deck-page__content
+  grid-area: body
+  display: grid
+  grid-template-rows: max-content max-content
+  grid-template-columns: 100vw
+  grid-template-areas: "content" "contact"
 
   justify-content: center
+
+.deck__content
+  grid-area: content
+  display: grid
+  grid-template-columns: 100%
+  grid-template-rows: max-content max-content
+  grid-template-areas: "deck" "resources"
+
+  justify-content: center
+
   grid-row-gap: 4%
   grid-column-gap: 2%
 
   padding: 0 1.5rem
   margin: 1rem 0 2rem 0
 
-  @media (min-width: 41.56rem)
+  @media (min-width: 35rem)
+    grid-template-columns: 96%
+
+  @media (min-width: 64rem)
+    grid-template-columns: 65%
+
+  @media (min-width: 92rem)
+    grid-template-columns: 45%
     grid-row-gap: 4%
     grid-column-gap: 2%
 
     margin: 2rem 0
-
-    justify-self: center
-
-    width: 66%
-
     padding: 0
-
-    justify-content: center
-    align-items: center
 
 .card:nth-of-type(1)
   @include card-stack-one
 
-.card__content
+.card
   display: grid
   grid-template-areas: "card"
 
+  padding: 4% 0
+
   justify-self: center
-  width: 45%
-
-  @media (min-width: 41.56rem)
-    width: 71%
-
-  @media (min-width: 41.56rem)
-    width: 71%
-
-  @media (min-width: 51.56rem)
-    width: 100%
+  width: 100%
 
   --card-background-color: #F0F0F0
   --card-background-color: #FAFAFA
 
+  @media (min-width: 26rem)
+    width: 90%
+
+    padding: 2.5% 0
+
+  @media (min-width: 41rem)
+    width: 85%
+
+  @media (min-width: 51rem)
+    width: 80%
+
+  &:nth-of-type(1)
+    @include card-stack-one
+
+  &:nth-of-type(2)
+    @include card-stack-two
+
+  &:nth-of-type(3)
+    @include card-stack-three
+
+  &:nth-of-type(4)
+    @include card-stack-four
 
   &__deck
     grid-area: card
-    max-width: 45%
+    max-width: 100%
     height: 0
 
     padding-top: calc(300 / 500 * 100%)
@@ -76,11 +146,10 @@
       box-shadow: 0 0.938em 2.188em rgba(50,50,93,.1), 0 0.313em 0.938em rgba(0,0,0,.07)
       cursor: pointer
 
-
-
   &__deck-contents
     display: grid
     grid-template-columns: auto
+    grid-template-columns: 100%
     grid-template-rows: 1.5fr 2fr .5fr
     grid-template-areas: "title" "summary" "footer"
 
@@ -154,7 +223,10 @@
     font-family: "Optician Sans"
     font-weight: 400
     font-style: normal
-    font-size: calc(12px + (22 - 12) * ((100vw - 320px) / (2000 - 320)))
+    font-size: calc(18px + (22 - 18) * ((100vw - 320px) / (2000 - 320)))
+
+    @media(min-width: 35rem)
+      font-size: calc(24px + (34 - 24) * ((100vw - 320px) / (2000 - 320)))
 
   &__learn-more
     padding: 0 2%
@@ -195,7 +267,6 @@
 
     z-index: 3
 
-
   &__bg-stack-3
     grid-area: card
 
@@ -209,46 +280,15 @@
 
     position: relative
 
-
-
-.card__content
-  display: grid
-  justify-content: center
-
-.card__container
-  display: grid
-  grid-template-areas: "card"
-
-  justify-self: center
-  width: 66%
-
-.card__content
-  display: grid
-  grid-template-columns: 1fr
-
-  justify-content: center
-  grid-row-gap: 4%
-  grid-column-gap: 2%
-
-  padding: 0 1.5rem
-  // margin: 1rem 0 2rem 0
-
-  @media (min-width: 41.56rem)
-    grid-row-gap: 4%
-    grid-column-gap: 2%
-
-    margin: 2rem 0
-
-    justify-self: center
-
-    width: 55%
-
-    padding: 0
-
-    justify-content: center
-    align-items: center
-
 .card-resources
+
+  display: grid
+  justify-self: center
+
+  width: 100%
+
+  @media (min-width: 45rem)
+    width: 80%
 
   font-family: "Optician Sans"
   font-weight: 400
@@ -281,3 +321,117 @@
   font-weight: 400
   font-style: normal
   font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (2000 - 320)))
+
+.deck__contact
+  grid-area: contact
+  display: grid
+  justify-self: center
+  justify-content: center
+
+  margin: 0
+  width: 89%
+
+  border-top: 2px solid black
+  border-bottom: 2px solid black
+
+  @media (min-width: 63rem)
+    margin: 2rem 0
+    width: 55%
+
+  @media (min-width: 81.56rem)
+    padding: 0
+
+.contact-form
+  display: grid
+
+  width: 100%
+  margin: 0%
+
+
+  font-family: "Optician Sans"
+  font-weight: 400
+  font-style: normal
+  font-size: calc(16px + (30 - 16) * ((100vw - 320px) / (2000 - 320)))
+
+  text-align: center
+
+  @media (min-width: 41.56rem)
+    margin: 5% 0
+    font-size: calc(22px + (28 - 22) * ((100vw - 320px) / (2000 - 320)))
+
+  @media (min-width: 81rem)
+    width: 100%
+
+  &__container
+
+  &__email-cta
+
+  &__email-input
+    display: grid
+    grid-template-areas: "input button"
+    grid-template-columns: 1fr .2fr
+    grid-template-rows: auto
+
+    height: 2rem
+
+    box-shadow: 0 0.125em 0.313em rgba(50,50,93,.09), 0 0.063em 0.125em rgba(0,0,0,.07)
+
+    input
+      grid-area: input
+      background-color: white
+      outline: none
+      border: none
+
+      text-align: center
+
+      &::selection,
+      &::-moz-selection
+       background: white
+
+    button
+      grid-area: button
+      background-color: white
+      border: none
+      -webkit-appearance: button
+      -moz-appearance: button
+
+      @media (min-width: 41.56rem)
+        color: #626161
+
+  &__twitter
+
+    a
+      color: black
+      text-decoration: none
+
+      &:hover
+        padding: 0 0 .125rem 0
+        border-bottom: .125rem solid black
+
+.deck__footer
+  grid-area: footer
+  display: flex
+  flex-direction: column nowrap
+  justify-self: center
+  justify-content: center
+
+  width: 100%
+  padding: 4% 0 3% 0
+
+  font-family: "Optician Sans"
+  font-weight: 400
+  font-style: normal
+  font-size: calc(18px + (36 - 18) * ((100vw - 320px) / (2000 - 320)))
+
+  text-align: center
+
+  @media (min-width: 41.56rem)
+    padding: 2% 0 3% 0
+
+  a
+    padding: 0 1%
+    color: black
+    text-decoration: none
+
+    &:hover
+      text-decoration: underline
