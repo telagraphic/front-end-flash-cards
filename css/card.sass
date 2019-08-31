@@ -1,48 +1,5 @@
 @import 'card-stacks.sass'
 
-.deck-page
-  display: grid
-  grid-template-areas: "header" "body" "footer"
-  grid-template-rows: auto auto auto
-  grid-template-columns: 100%
-
-  background-color: #f0f0f0
-
-.deck-page__header
-  grid-area: header
-  display: grid
-  justify-items: center
-
-.deck-header
-
-  &__title
-    font-family: "Sans Forgetica"
-    font-weight: 400
-    font-style: normal
-    font-size: calc(28px + (72 - 28) * ((100vw - 320px) / (2000 - 320)))
-
-    margin: 0
-    padding: 1.5rem 0
-
-    @media (min-width: 81.56rem)
-      font-size: calc(35px + (72 - 35) * ((100vw - 320px) / (2000 - 320)))
-
-  &__github-star
-    justify-self: center
-
-  &__description
-    width: 89%
-    justify-self: center
-
-    font-family: "Optician Sans"
-    font-weight: 400
-    font-style: normal
-    font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (2000 - 320)))
-    text-align: center
-
-    @media (min-width: 41.56rem)
-      font-size: calc(26px + (30 - 26) * ((100vw - 320px) / (2000 - 320)))
-
 .deck-page__content
   grid-area: body
   display: grid
@@ -334,104 +291,17 @@
   border-top: 2px solid black
   border-bottom: 2px solid black
 
-  @media (min-width: 63rem)
+  @media (min-width: 55rem)
     margin: 2rem 0
-    width: 55%
+    width: 65%
 
-  @media (min-width: 81.56rem)
+  @media (min-width: 62rem)
+    margin: 2rem 0
+    width: 40%
+
+  @media (min-width: 59rem) and (max-width: 92rem)
     padding: 0
+    width: 45%
 
-.contact-form
-  display: grid
-
-  width: 100%
-  margin: 0%
-
-
-  font-family: "Optician Sans"
-  font-weight: 400
-  font-style: normal
-  font-size: calc(16px + (30 - 16) * ((100vw - 320px) / (2000 - 320)))
-
-  text-align: center
-
-  @media (min-width: 41.56rem)
-    margin: 5% 0
-    font-size: calc(22px + (28 - 22) * ((100vw - 320px) / (2000 - 320)))
-
-  @media (min-width: 81rem)
-    width: 100%
-
-  &__container
-
-  &__email-cta
-
-  &__email-input
-    display: grid
-    grid-template-areas: "input button"
-    grid-template-columns: 1fr .2fr
-    grid-template-rows: auto
-
-    height: 2rem
-
-    box-shadow: 0 0.125em 0.313em rgba(50,50,93,.09), 0 0.063em 0.125em rgba(0,0,0,.07)
-
-    input
-      grid-area: input
-      background-color: white
-      outline: none
-      border: none
-
-      text-align: center
-
-      &::selection,
-      &::-moz-selection
-       background: white
-
-    button
-      grid-area: button
-      background-color: white
-      border: none
-      -webkit-appearance: button
-      -moz-appearance: button
-
-      @media (min-width: 41.56rem)
-        color: #626161
-
-  &__twitter
-
-    a
-      color: black
-      text-decoration: none
-
-      &:hover
-        padding: 0 0 .125rem 0
-        border-bottom: .125rem solid black
-
-.deck__footer
-  grid-area: footer
-  display: flex
-  flex-direction: column nowrap
-  justify-self: center
-  justify-content: center
-
-  width: 100%
-  padding: 4% 0 3% 0
-
-  font-family: "Optician Sans"
-  font-weight: 400
-  font-style: normal
-  font-size: calc(18px + (36 - 18) * ((100vw - 320px) / (2000 - 320)))
-
-  text-align: center
-
-  @media (min-width: 41.56rem)
-    padding: 2% 0 3% 0
-
-  a
-    padding: 0 1%
-    color: black
-    text-decoration: none
-
-    &:hover
-      text-decoration: underline
+  @media (min-width: 70rem)
+    width: 35%
