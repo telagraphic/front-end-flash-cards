@@ -1,0 +1,30 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+{% include head.html %}
+
+<body class="page">
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  {% include header.html %}
+
+  <main class="page__content">
+    {{content}}
+  </main>
+
+  {% include footer.html %}
+
+</body>
+<script>
+  const email = document.querySelector('input');
+  email.style.transition = 'all .5s ease';
+  email.addEventListener('focus', function() {
+    email.placeholder = '';
+  });
+  email.addEventListener('blur', function() {
+    email.placeholder = 'email@email.com';
+  });
+</script>
+
+</html>

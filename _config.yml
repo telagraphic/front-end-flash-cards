@@ -1,0 +1,17 @@
+title: Front End Flash Cards
+description:
+author: Nick Lyons
+
+baseurl: "/"
+permalink: pretty
+
+highlighter: rouge
+
+sass:
+  sass_dir: ./css
+  style: compressed
+
+# plugin:
+#   - octopress-minify-html
+
+exclude: []
