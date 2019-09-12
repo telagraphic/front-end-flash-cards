@@ -251,29 +251,75 @@
   font-style: normal;
 
   h3 {
+    padding: 0 0 3rem 0;
+    margin: 0;
     text-align: center;
-    font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (2000 - 320)));
+    font-size: calc(26px + (32 - 26) * ((100vw - 320px) / (2000 - 320)));
 
     @media (min-width: 41.65rem) {
-      font-size: calc(26px + (30 - 26) * ((100vw - 320px) / (2000 - 320)));
+      font-size: calc(30px + (40 - 30) * ((100vw - 320px) / (2000 - 320)));
     }
   }
 }
 
-.card-resources-list {
-  a {
-    text-decoration: none;
-    color: black;
 
-    @media (min-width: 41.65rem) {
-      font-size: calc(26px + (30 - 26) * ((100vw - 320px) / (2000 - 320)));
+.card-resources__section {
+  padding: 1% 0 0 0;
+  margin: 0;
+
+  @media (min-width: 50rem) {
+    padding: 2% 0 0 0;
+  }
+
+  h4 {
+
+
+    font-size: calc(20px + (26 - 20) * ((100vw - 320px) / (2000 - 320)));
+
+    margin: 0;
+    padding: 1rem 0 0rem 0;
+
+    @media (min-width: 45rem) {
+      font-size: calc(24px + (32 - 24) * ((100vw - 320px) / (2000 - 320)));
     }
 
-    &:hover {
-      text-decoration: underline;
+  }
+
+
+  &-list {
+    padding: 0;
+    list-style-position: outside;
+
+
+    a {
+      text-decoration: none;
+      color: black;
+
+      @media (min-width: 41.65rem) {
+        font-size: calc(20px + (28 - 20) * ((100vw - 320px) / (2000 - 320)));
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
+
+// .card-resources-list {
+//   a {
+//     text-decoration: none;
+//     color: black;
+//
+//     @media (min-width: 41.65rem) {
+//       font-size: calc(26px + (30 - 26) * ((100vw - 320px) / (2000 - 320)));
+//     }
+//
+//     &:hover {
+//       text-decoration: underline;
+//     }
+//   }
+// }
 
 .card__content-footer {
   display: flex;
@@ -293,14 +339,15 @@
   width: 89%;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
+  margin: 4% 0 0 0;
 
   @media (min-width: 55rem) {
-    margin: 2rem 0;
+    // margin: 2rem 0;
     width: 65%;
   }
 
   @media (min-width: 62rem) {
-    margin: 2rem 0;
+    // margin: 2rem 0;
     width: 40%;
   }
 
@@ -311,5 +358,6 @@
 
   @media (min-width: 70rem) {
     width: 35%;
+    margin: 4% 0 0 0;
   }
 }
