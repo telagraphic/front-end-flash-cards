@@ -1,0 +1,56 @@
+.about__container {
+  display: grid;
+  grid-template-columns: 89%;
+  justify-content: center;
+
+  @media (min-width: 70rem) {
+    grid-template-columns: 40%;
+  }
+
+  @media (min-width: 100rem) {
+    grid-template-columns: 40%;
+  }
+}
+
+.about__section {
+
+
+
+  h3 {
+    font-size: calc(24px + (32 - 24) * ((100vw - 320px) / (2000 - 320)));
+    font-family: "Optician Sans";
+    text-shadow: 2px 1px #d8d8d8;
+  }
+
+  p {
+    font-size: calc(20px + (28 - 20) * ((100vw - 320px) / (2000 - 320)));
+    line-height: 1.4;
+    font-family: "Public Sans Thin";
+  }
+
+  ul {
+    font-size: calc(20px + (28 - 20) * ((100vw - 320px) / (2000 - 320)));
+    line-height: 1.4;
+    font-family: "Public Sans Thin";
+
+    list-style-position: outside;
+
+  }
+
+  li {
+
+  }
+
+  a {
+
+    &:hover {
+      color: black;
+    }
+
+  }
+
+  b {
+
+  }
+
+}
