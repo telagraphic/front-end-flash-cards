@@ -90,16 +90,19 @@
 @mixin card-stack-one {
   .card-decks__deck-stack-1 {
     box-shadow: 0 0.125em 0.313em rgba(50, 50, 93, 0.09), 0 0.063em 0.125em rgba(0, 0, 0, 0.07);
+    // box-shadow: 0 0.125em 0.313em rgba(0, 0, 7, 0.29), 0 0.063em 0.125em rgba(0, 0, 7, 0.29);
     transform: rotate(1deg);
   }
 
   .card-decks__deck-stack-2 {
     box-shadow: 0 0.125em 0.313em rgba(50, 50, 93, 0.09), 0 0.063em 0.125em rgba(0, 0, 0, 0.07);
+    // box-shadow: 0 0.125em 0.313em rgba(0, 0, 7, 0.29), 0 0.063em 0.125em rgba(0, 0, 7, 0.29);
     transform: rotate(-1.5deg);
   }
 
   .card-decks__deck-stack-3 {
     box-shadow: 0 0.125em 0.313em rgba(50, 50, 93, 0.09), 0 0.063em 0.125em rgba(0, 0, 0, 0.07);
+    // box-shadow: 0 0.125em 0.313em rgba(0, 0, 7, 0.29), 0 0.063em 0.125em rgba(0, 0, 7, 0.29);
     transform: rotate(1.15deg) translate(-0.45rem, 0.45rem);
   }
 }
