@@ -4,10 +4,13 @@ body {
   font-family: "Sans Forgetica";
   font-weight: 400;
   font-style: normal;
+  color: #3c3c3c;
 }
 
 a {
+  color: #3c3c3c;
   -webkit-tap-highlight-color: transparent;
+
 }
 
 button {
@@ -19,7 +22,8 @@ button {
   grid-template-areas: "header" "body" "footer";
   grid-template-rows: auto auto auto;
   grid-template-columns: 100%;
-  background-color: #f0f0f0;
+  background-color: #F0F0F0;
+  background-color: #FAFAFA;
 }
 
 .page__header {
@@ -48,7 +52,7 @@ button {
 
   a {
     padding: 0 1%;
-    color: black;
+    // color: black;
     text-decoration: none;
 
     &:hover {
@@ -58,13 +62,18 @@ button {
 }
 
 .page-header {
+
   &__title {
+    margin: 0;
+    padding: 1.5rem 0;
+
+    text-decoration: none;
+
     font-family: "Sans Forgetica";
     font-weight: 400;
     font-style: normal;
     font-size: calc(28px + (72 - 28) * ((100vw - 320px) / (2000 - 320)));
-    margin: 0;
-    padding: 1.5rem 0;
+    text-shadow: 3px 2px #d8d8d8;
 
     @media (min-width: 81.56rem) {
       font-size: calc(35px + (72 - 35) * ((100vw - 320px) / (2000 - 320)));
@@ -82,6 +91,8 @@ button {
     font-weight: 400;
     font-style: normal;
     font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (2000 - 320)));
+
+    text-shadow: 1px 2px #d8d8d8;
 
     @media (min-width: 41.56rem) {
       font-size: calc(26px + (30 - 26) * ((100vw - 320px) / (2000 - 320)));

@@ -1,4 +1,91 @@
+.web-performance {
+  --background-color: #2e447c;
+  --text-color: #ff0000;
 
+  section {
+    background-color: var(--background-color);
+  }
+
+  h3 {
+    color: var(--text-color);
+    text-shadow: 2px 2px #ff000073;
+  }
+
+  li {
+    color: var(--text-color);
+  }
+
+  a {
+    color: var(--text-color);
+  }
+}
+
+.typography {
+  --background-color: #c61f29;
+  --text-color: #fec03e;
+
+  section {
+    background-color: var(--background-color);
+  }
+
+  h3 {
+    color: var(--text-color);
+    text-shadow: 2px 2px #fec03e6b;
+  }
+
+  li {
+    color: var(--text-color);
+  }
+
+  a {
+    color: var(--text-color);
+  }
+}
+
+.flexbox {
+  --background-color: #fec03e;
+  --text-color: #496c1f;
+
+  section {
+    background-color: var(--background-color);
+  }
+
+  h3 {
+    color: var(--text-color);
+    text-shadow: 2px 2px #496c1f8a;
+  }
+
+  li {
+    color: var(--text-color);
+  }
+
+  a {
+    color: var(--text-color);
+  }
+}
+
+.user-experience {
+  --background-color: #63ad33;
+  --text-color: #2e449b;
+
+  section {
+    background-color: var(--background-color);
+  }
+
+  h3 {
+    color: var(--text-color);
+    text-shadow: 2px 2px #2e449b82;
+  }
+
+  li {
+    color: var(--text-color);
+  }
+
+  a {
+    color: var(--text-color);
+  }
+
+}
 
 @mixin card-stack-one {
   .card-decks__deck-stack-1 {
