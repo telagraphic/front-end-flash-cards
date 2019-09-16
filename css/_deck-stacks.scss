@@ -1,6 +1,7 @@
 .web-performance {
   --background-color: #fec03e;
   --text-color: #496c1f;
+  --text-shadow: #496c1fa1;
 
   section {
     background-color: var(--background-color);
@@ -8,7 +9,7 @@
 
   h3 {
     color: var(--text-color);
-    text-shadow: 2px 2px #ff000073;
+    text-shadow: 2px 2px var(--text-shadow);
   }
 
   li {
@@ -23,6 +24,7 @@
 .typography {
   --background-color: #c61f29;
   --text-color: #fec03e;
+  --text-shadow: #fec03e6b;
 
   section {
     background-color: var(--background-color);
@@ -30,7 +32,7 @@
 
   h3 {
     color: var(--text-color);
-    text-shadow: 2px 2px #fec03e6b;
+    text-shadow: 2px 2px var(--text-shadow);
   }
 
   li {
@@ -45,6 +47,7 @@
 .flexbox {
   --background-color: #2e447c;
   --text-color: #ff0000;
+  --text-shadow: #ff000085;
 
   section {
     background-color: var(--background-color);
@@ -52,7 +55,7 @@
 
   h3 {
     color: var(--text-color);
-    text-shadow: 2px 2px #496c1f8a;
+    text-shadow: 2px 2px var(--text-shadow);
   }
 
   li {
@@ -67,6 +70,7 @@
 .user-experience {
   --background-color: #63ad33;
   --text-color: #2e449b;
+  --text-shadow: #2e449b82;
 
   section {
     background-color: var(--background-color);
@@ -74,7 +78,7 @@
 
   h3 {
     color: var(--text-color);
-    text-shadow: 2px 2px #2e449b82;
+    text-shadow: 2px 2px var(--text-shadow);
   }
 
   li {
