@@ -18,12 +18,12 @@
 </body>
 <script>
   const email = document.querySelector('input');
-  email.style.transition = 'all .5s ease';
-  email.addEventListener('focus', function() {
-    email.placeholder = '';
+  // email.style.transition = 'all .5s ease';
+  email.addEventListener('focus', function(event) {
+    event.target.placeholder = '';
   });
-  email.addEventListener('blur', function() {
-    email.placeholder = 'email@email.com';
+  email.addEventListener('blur', function(event) {
+    event.target.placeholder = 'email@email.com';
   });
 
   const links = Array.from(document.querySelectorAll('.card-decks__deck'));
