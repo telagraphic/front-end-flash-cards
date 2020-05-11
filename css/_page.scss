@@ -166,9 +166,13 @@ button {
   }
 
   &__twitter {
+    font-family: "Public Sans Thin";
+
     a {
       color: black;
+      font-family: 'Optician Sans';
       text-decoration: none;
+
 
       &:hover {
         padding: 0 0 0.125rem 0;
